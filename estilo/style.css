@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap'); /* pegamos o codigo do google fonts, nos permite usar a fonte 2 */
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); /* pegamos o codigo do google fonts, nos permite usar a fonte 3 */
+
+:root{ /* nos permite criar variaveis */
+   --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+   --fonte2:'Passion One', sans-serif;
+   --fonte3:'Sriracha', cursive;
+}
+
+ *{             /* (*) esse simbolo significa que as configurações servem para todos os elementos gerais */
+    margin: 0px;
+    padding: 0px;
+
+ }
+
+ html,body{ /* as alterações servem para o html eo body ao mesmo tempo */
+    min-height: 100vh ; /* o tamanho do texto vai ser de acordo com o tamanho da view port(altura) */
+    background-color: darkgray;
+    font-family: var(--fonte1);
+ }
+ header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+ }
+ header h1 {
+    padding-top: 50px;
+    /* text-transform: uppercase; deixa a letra maiuscula */
+    font-variant: small-caps; /* deixa a letra maiuscula tambem */
+    font-family: var(--fonte2);
+    font-size: 4vw ;/*  vw significa largura da tela */ /* para fazer com que o texto que esta dentro de h1 aumente ou diminua de temanho em relação ao tamanho da tela usamos o vw */
+ }
+ header p {
+    padding-bottom: 50px ;
+
+ }
+
+ header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+ }
+ header a:hover, footer a:hover{
+    text-decoration: underline;
+ }
+ section{
+    padding-top:10vh;
+    padding-bottom: 10vh ;
+    line-height: 2em; /* vai criar um espaço vazio entre cada frase */
+    padding-left:30px ; /* vai desgrudar o texto do lado esquerdo */
+    font-family: var(--fonte3);
+    font-size: 3.5vw ; /*  vw significa largura da tela */ /* para fazer com que o texto que esta dentro de h1 aumente ou diminua de temanho em relação ao tamanho da tela usamos o vw */
+ }
+ section > p{
+   padding-bottom:2em ; /* vai criar um espaço vai entre os paragrafos */
+ }
+ section.normal{
+    background-color: white;
+    color:black;
+ }
+ section.imagem{
+    background-color: rgb(32, 30, 30);
+    color: white; 
+    box-shadow: inset 6px 6px 13px 0px black; /* vai criar sombra ao redor da imagem */
+    /* 6px de sombra horizontal; */
+    /* 6px de sombra vertical  */
+    /* 13px de desfoque */
+   /* 0px de propagação/espalhamento */
+   background-size: cover; /* vai fazer a imagem se adpatar em relação ao tamanho da tela,ou seja, da view port */
+   background-attachment: fixed; /* usamos esse comando para deixar as imagens com efeito Parallax simples */
+
+ }
+ section.imagem>p{
+    background-color: rgba(0, 0, 0, 0.512);
+    display: inline-block; /* o fundo preto onde esta os paragrafos vai ficar alinhado com os paragrafos criando uma caixa */
+    padding: 20px;
+    text-shadow: 1px 1px 0px black ;
+
+ }
+ section#img01{
+   background-image: url('../imagens/background001.jpg');
+   background-position:right center ; /* a juaninha esta do lado direito então usamos esse codigo para mostra o lado direito da imagem, e centralizar a imagem*/
+   
+   
+ }
+ section#img02{
+   background-image: url('../imagens/background002.jpg');
+    
+
+ }
+ footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+ }
